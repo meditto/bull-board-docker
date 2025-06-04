@@ -6,10 +6,11 @@ COPY ./package.json .
 COPY ./yarn.lock .
 
 ENV NODE_ENV production
-ENV REDIS_HOST localhost
+ENV REDIS_HOST 'oregon-keyvalue.render.com'
+ENV REDIS_USERNAME: 'red-csc15j08fa8c738rjmcg'
+ENV REDIS_PASSWORD 'Pqk06tGzH13c1bvkhy1wkAQ2eFledr6P'
 ENV REDIS_PORT 6379
-ENV REDIS_USE_TLS false
-ENV REDIS_PASSWORD ''
+ENV REDIS_USE_TLS true
 ENV BULL_PREFIX bull
 ENV BULL_VERSION BULLMQ
 ENV USER_LOGIN ''

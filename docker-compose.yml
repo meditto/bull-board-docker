@@ -1,14 +1,17 @@
-version: "3.5"
+version: '3.5'
 
 services:
-  bullboard:
-    container_name: bullboard
-    build:
-      dockerfile: ./Dockerfile
-      context: .
-    restart: always
-    ports:
-      - 3000:3000
-    environment:
-      REDIS_HOST: host
-      REDIS_PASSWORD: pass
+    bullboard:
+        container_name: bullboard
+        build:
+            dockerfile: ./Dockerfile
+            context: .
+        restart: always
+        ports:
+            - 3000:3000
+        environment:
+            REDIS_USERNAME: red-csc15j08fa8c738rjmcg
+            REDIS_HOST: oregon-keyvalue.render.com
+            REDIS_PORT: 6379
+            REDIS_PASSWORD: Pqk06tGzH13c1bvkhy1wkAQ2eFledr6P
+            REDIS_USE_TLS: 'true'
